@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.unbosque.edu.co/ontologies/learning_dimensions" uri="learning_dimensions.owx"/>
+    <uri id="Imports Wizard Entry" name="http://www.unbosque.edu.co/ontologies/learning_activities" uri="learning_activities.owx"/>
+    <uri id="Imports Wizard Entry" name="http://www.unbosque.edu.co/ontologies/learning_outcomes" uri="learning_outcomes.owx"/>
+    <uri id="Imports Wizard Entry" name="http://www.unbosque.edu.co/ontologies/basics_bibliography" uri="basics_bibliography.owx"/>
+    <uri id="Imports Wizard Entry" name="http://www.unbosque.edu.co/ontologies/complementary_bibliography" uri="complementary_bibliography.owx"/>
+    <uri id="Imports Wizard Entry" name="http://www.unbosque.edu.co/ontologies/teacher" uri="teacher.owx"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1708051087132" name="http://www.unbosque.edu.co/ontologies/basics_bibliography" uri="basics_bibliography.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1708051087132" name="http://www.unbosque.edu.co/ontologies/bibliography" uri="bibliography.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1708051087132" name="http://www.unbosque.edu.co/ontologies/complementary_bibliography" uri="complementary_bibliography.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1708051087132" name="http://www.unbosque.edu.co/ontologies/general_contents" uri="general_contents.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1708051087132" name="http://www.unbosque.edu.co/ontologies/learning_activities" uri="learning_activities.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1708051087132" name="http://www.unbosque.edu.co/ontologies/learning_dimensions" uri="learning_dimensions.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1708051087132" name="http://www.unbosque.edu.co/ontologies/learning_outcomes" uri="learning_outcomes.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1708051087132" name="http://www.unbosque.edu.co/ontologies/schedule" uri="schedule.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1708051087132" name="http://www.unbosque.edu.co/ontologies/student" uri="student.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1708051087132" name="http://www.unbosque.edu.co/ontologies/subject" uri="Subject.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1708051087132" name="http://www.unbosque.edu.co/ontologies/teacher" uri="teacher.owx"/>
+    </group>
+</catalog>

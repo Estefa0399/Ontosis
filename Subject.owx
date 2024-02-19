@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.unbosque.edu.co/ontologies/subject"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.unbosque.edu.co/ontologies/subject">
+    <Prefix name="" IRI="http://www.semanticweb.org/estef/ontologies/2023/9/untitled-ontology-22/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.unbosque.edu.co/ontologies/bibliography</Import>
+    <Import>http://www.unbosque.edu.co/ontologies/general_contents</Import>
+    <Import>http://www.unbosque.edu.co/ontologies/learning_activities</Import>
+    <Import>http://www.unbosque.edu.co/ontologies/learning_dimensions</Import>
+    <Import>http://www.unbosque.edu.co/ontologies/learning_outcomes</Import>
+    <Import>http://www.unbosque.edu.co/ontologies/schedule</Import>
+    <Import>http://www.unbosque.edu.co/ontologies/student</Import>
+    <Import>http://www.unbosque.edu.co/ontologies/teacher</Import>
+    <Declaration>
+        <Class IRI="#faculty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#module_topics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#program"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#subject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#weeks"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContents"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEnrolledin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#teaches"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#uses"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCredits"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasHourlyintensity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasHours"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSubjectID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSubjectName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ds"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FranRomero"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GermanCampos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HelioRamirez"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JuanPerez"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UBIS001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UBIS0037"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WilsonRojas"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/learning_activities#program_learning_activities"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/learning_activities#learning_activities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/learning_activities#subject_learning_activities"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/learning_activities#learning_activities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/learning_activities#subject_learning_activities"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/learning_activities#university_learning_activities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/learning_outcomes#program_learning_outcomes"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/learning_outcomes#learning_outcomes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/learning_outcomes#subject_learning_outcomes"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/learning_outcomes#learning_outcomes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/learning_outcomes#subject_learning_outcomes"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/learning_outcomes#university_learning_outcomes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#module_topics"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/schedule#schedule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#weeks"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/schedule#schedule"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/teacher#teacher"/>
+        <NamedIndividual IRI="#Ds"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/teacher#teacher"/>
+        <NamedIndividual IRI="#FranRomero"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/teacher#teacher"/>
+        <NamedIndividual IRI="#GermanCampos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#subject"/>
+        <NamedIndividual IRI="#HelioRamirez"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/teacher#teacher"/>
+        <NamedIndividual IRI="#HelioRamirez"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/teacher#teacher"/>
+        <NamedIndividual IRI="#JuanPerez"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#subject"/>
+        <NamedIndividual IRI="#UBIS001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#subject"/>
+        <NamedIndividual IRI="#UBIS0037"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/teacher#teacher"/>
+        <NamedIndividual IRI="#WilsonRojas"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#teaches"/>
+        <NamedIndividual IRI="#Ds"/>
+        <NamedIndividual IRI="#UBIS001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#teaches"/>
+        <NamedIndividual IRI="#Ds"/>
+        <NamedIndividual IRI="#UBIS0037"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#teaches"/>
+        <NamedIndividual IRI="#FranRomero"/>
+        <NamedIndividual IRI="#UBIS001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#teaches"/>
+        <NamedIndividual IRI="#FranRomero"/>
+        <NamedIndividual IRI="#UBIS0037"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#teaches"/>
+        <NamedIndividual IRI="#GermanCampos"/>
+        <NamedIndividual IRI="#UBIS001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#teaches"/>
+        <NamedIndividual IRI="#GermanCampos"/>
+        <NamedIndividual IRI="#UBIS0037"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#teaches"/>
+        <NamedIndividual IRI="#HelioRamirez"/>
+        <NamedIndividual IRI="#UBIS001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#teaches"/>
+        <NamedIndividual IRI="#HelioRamirez"/>
+        <NamedIndividual IRI="#UBIS0037"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#teaches"/>
+        <NamedIndividual IRI="#JuanPerez"/>
+        <NamedIndividual IRI="#UBIS001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#teaches"/>
+        <NamedIndividual IRI="#JuanPerez"/>
+        <NamedIndividual IRI="#UBIS0037"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#teaches"/>
+        <NamedIndividual IRI="#WilsonRojas"/>
+        <NamedIndividual IRI="#UBIS001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#teaches"/>
+        <NamedIndividual IRI="#WilsonRojas"/>
+        <NamedIndividual IRI="#UBIS0037"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSubjectID"/>
+        <NamedIndividual IRI="#UBIS001"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSubjectName"/>
+        <NamedIndividual IRI="#UBIS001"/>
+        <Literal>Discretas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSubjectID"/>
+        <NamedIndividual IRI="#UBIS0037"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSubjectName"/>
+        <NamedIndividual IRI="#UBIS0037"/>
+        <Literal>Basicas</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.unbosque.edu.co/ontologies/basics_bibliography#useContents"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/bibliography#bibliography"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#subject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContents"/>
+        <Class IRI="#subject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEnrolledin"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/student#student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#teaches"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/teacher#teacher"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#uses"/>
+        <Class IRI="#subject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/schedule#schedule"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContents"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/general_contents#general_contents"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEnrolledin"/>
+        <Class IRI="#subject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#teaches"/>
+        <Class IRI="#subject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#uses"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/bibliography#bibliography"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSubjectName"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSubjectID"/>
+        <Class IRI="#subject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSubjectName"/>
+        <Class IRI="#subject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.unbosque.edu.co/ontologies/teacher#hasAttentionSpaces"/>
+        <Class IRI="http://www.unbosque.edu.co/ontologies/teacher#teacher"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCredits"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasHourlyintensity"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasHours"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSubjectID"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSubjectName"/>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSubjectName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>R22</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#teaches"/>
+                <Variable abbreviatedIRI=":t"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasSubjectID"/>
+                <Variable abbreviatedIRI=":s"/>
+                <Variable abbreviatedIRI=":n"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable abbreviatedIRI=":n"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasSubjectID"/>
+                <Variable abbreviatedIRI=":w"/>
+                <Variable abbreviatedIRI=":m"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable abbreviatedIRI=":m"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#teaches"/>
+                <Variable abbreviatedIRI=":t"/>
+                <Variable abbreviatedIRI=":w"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
