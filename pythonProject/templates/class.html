@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ class_name }} class</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('{{ url_for('static', filename='images/prueba3.png') }}');
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        h3 {
+            color: #555;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #0056b3;
+        }
+        .class-link {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+        .class-link:hover {
+            background-color: #eaeaea;
+        }
+        .individual-link {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+        .individual-link:hover {
+            background-color: #eaeaea;
+        }
+        /* Estilos para el formulario de búsqueda */
+        .search-form {
+            margin-bottom: 20px;
+        }
+        .search-form input[type="text"] {
+            padding: 8px;
+            width: 70%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .search-form button {
+            padding: 8px 15px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>'{{ class_name }}' class</h2>
+        <a href="{{ url_for('ontology_page') }}" class="back-link">Volver</a><br><br>
+        <!-- Formulario de búsqueda -->
+        <form class="search-form" action="{{ url_for('class_page', iri=iri) }}" method="GET">
+            <input type="text" name="search" placeholder="Buscar individuos...">
+            <button type="submit">Buscar</button>
+        </form>
+        {% for subclass_name, subclass_url in subclasses %}
+            <a href="{{ subclass_url }}" class="class-link">{{ subclass_name }}</a>
+        {% endfor %}
+        <h3>Individuals</h3>
+        {% if individuals %}
+            <ul>
+                {% for individual_name, individual_url in individuals %}
+                    <li><a href="{{ individual_url }}" class="individual-link">{{ individual_name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No se encontraron individuos.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

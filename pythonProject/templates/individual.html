@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ individual_name }} individual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('{{ url_for('static', filename='images/prueba3.png') }}');
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #0056b3;
+        }
+        .class-link,
+        .relation {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+        .class-link:hover,
+        .relation:hover {
+            background-color: #eaeaea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>{{ individual_name }} individual</h2>
+        <a href="{{ url_for('ontology_page') }}" class="back-link">Volver a la página principal</a><br><br>
+        <h3>Classes</h3>
+        {% for class_name, class_url in classes %}
+            <a href="{{ class_url }}" class="class-link">{{ class_name }}</a>
+        {% endfor %}
+        <h3>Object Properties</h3>
+        {% if object_properties  %}
+            {% for object_properties , values in object_properties .items() %}
+                <p class="relation">{{ object_properties }}:
+                {% for value in values %}
+                    {{ value }},
+                {% endfor %}
+                </p>
+            {% endfor %}
+        {% else %}
+            <p class="relation">No object properties associated with this individual.</p>
+        {% endif %}
+        <h3>Data Properties</h3>
+        {% for data_property, value in data_properties.items() %}
+            <p class="relation">{{ data_property }}: {{ value }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

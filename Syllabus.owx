@@ -1,0 +1,567 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://localhost:9000/Syllabus"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://localhost:9000/Syllabus">
+    <Prefix name="" IRI="http://www.semanticweb.org/estef/ontologies/2024/3/untitled-ontology-80/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#basic_bibliography"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#bibliography"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#complementary_bibliography"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#conclusion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dimension_evaluation_instrument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dimension_evaluation_means"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dimension_evaluation_techniques"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dimension_learning_activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dimension_learning_evaluation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dimension_learning_outcome"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#evaluation_dimension_evaluation_instrument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#evaluation_dimension_evaluation_means"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#evaluation_dimension_evaluation_techniques"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#evaluation_dimension_learning_activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#evaluation_dimension_learning_evaluation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#evaluation_dimension_learning_outcome"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#evaluation_learning_dimension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#general_contents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#learning_dimensions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#schedule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#student"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#subject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#syllabus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#syllabus_evaluation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#teacher"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containsBibliography"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containsContents"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containsSubject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAssociatedActivity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAssociatedEvaluation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAssociatedOutcome"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBasicBibliography"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComplementaryBibliography"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasConclusionSyllabus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContents"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDimension"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSyllabusToEvaluate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEnroledIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#teaches"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasActivityName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasConclusionAct"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasConclusionResult"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDimensionName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOutcomeVerb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStudentEmail"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStudentID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStudentName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStudentSemester"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStudentStudyDays"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSubjectCredits"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSubjectHourlyIntensity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSubjectHours"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSubjectID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSubjectName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSyllabusName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTeacherAttentionSpaces"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTeacherEmail"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTeacherID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTeacherName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasWeeks"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#basic_bibliography"/>
+        <Class IRI="#bibliography"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#complementary_bibliography"/>
+        <Class IRI="#bibliography"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dimension_evaluation_instrument"/>
+        <Class IRI="#dimension_learning_evaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dimension_evaluation_means"/>
+        <Class IRI="#dimension_learning_evaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dimension_evaluation_techniques"/>
+        <Class IRI="#dimension_learning_evaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dimension_learning_activity"/>
+        <Class IRI="#learning_dimensions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dimension_learning_evaluation"/>
+        <Class IRI="#learning_dimensions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dimension_learning_outcome"/>
+        <Class IRI="#learning_dimensions"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#evaluation_dimension_evaluation_instrument"/>
+        <Class IRI="#evaluation_dimension_learning_evaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#evaluation_dimension_evaluation_means"/>
+        <Class IRI="#evaluation_dimension_learning_evaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#evaluation_dimension_evaluation_techniques"/>
+        <Class IRI="#evaluation_dimension_learning_evaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#evaluation_dimension_learning_activity"/>
+        <Class IRI="#evaluation_learning_dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#evaluation_dimension_learning_evaluation"/>
+        <Class IRI="#evaluation_learning_dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#evaluation_dimension_learning_outcome"/>
+        <Class IRI="#evaluation_learning_dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#evaluation_learning_dimension"/>
+        <Class IRI="#syllabus_evaluation"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containsBibliography"/>
+        <Class IRI="#syllabus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containsContents"/>
+        <Class IRI="#syllabus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containsSubject"/>
+        <Class IRI="#syllabus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#subject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAssociatedActivity"/>
+        <Class IRI="#learning_dimensions"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAssociatedEvaluation"/>
+        <Class IRI="#learning_dimensions"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAssociatedOutcome"/>
+        <Class IRI="#learning_dimensions"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBasicBibliography"/>
+        <Class IRI="#bibliography"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComplementaryBibliography"/>
+        <Class IRI="#bibliography"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasConclusionSyllabus"/>
+        <Class IRI="#conclusion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContents"/>
+        <Class IRI="#student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDimension"/>
+        <Class IRI="#syllabus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSyllabusToEvaluate"/>
+        <Class IRI="#syllabus_evaluation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEnroledIn"/>
+        <Class IRI="#student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#teaches"/>
+        <Class IRI="#teacher"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#containsBibliography"/>
+        <Class IRI="#bibliography"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#containsContents"/>
+        <Class IRI="#general_contents"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#containsSubject"/>
+        <Class IRI="#subject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="#schedule"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAssociatedActivity"/>
+        <Class IRI="#dimension_learning_activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAssociatedEvaluation"/>
+        <Class IRI="#dimension_learning_evaluation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAssociatedOutcome"/>
+        <Class IRI="#dimension_learning_outcome"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBasicBibliography"/>
+        <Class IRI="#basic_bibliography"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComplementaryBibliography"/>
+        <Class IRI="#complementary_bibliography"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasConclusionSyllabus"/>
+        <Class IRI="#dimension_learning_activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasConclusionSyllabus"/>
+        <Class IRI="#dimension_learning_outcome"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContents"/>
+        <Class IRI="#general_contents"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDimension"/>
+        <Class IRI="#learning_dimensions"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSyllabusToEvaluate"/>
+        <Class IRI="#syllabus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEnroledIn"/>
+        <Class IRI="#subject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#teaches"/>
+        <Class IRI="#subject"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasActivityName"/>
+        <Class IRI="#dimension_learning_activity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasActivityName"/>
+        <Class IRI="#evaluation_dimension_learning_activity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasConclusionAct"/>
+        <Class IRI="#conclusion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasConclusionResult"/>
+        <Class IRI="#conclusion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDimensionName"/>
+        <Class IRI="#evaluation_learning_dimension"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDimensionName"/>
+        <Class IRI="#learning_dimensions"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOutcomeVerb"/>
+        <Class IRI="#dimension_learning_outcome"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOutcomeVerb"/>
+        <Class IRI="#evaluation_dimension_learning_outcome"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStudentEmail"/>
+        <Class IRI="#student"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStudentID"/>
+        <Class IRI="#student"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStudentName"/>
+        <Class IRI="#student"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStudentSemester"/>
+        <Class IRI="#student"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStudentStudyDays"/>
+        <Class IRI="#student"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSubjectCredits"/>
+        <Class IRI="#subject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSubjectHourlyIntensity"/>
+        <Class IRI="#subject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSubjectHours"/>
+        <Class IRI="#subject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSubjectID"/>
+        <Class IRI="#subject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSubjectName"/>
+        <Class IRI="#subject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSyllabusName"/>
+        <Class IRI="#syllabus"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTeacherAttentionSpaces"/>
+        <Class IRI="#teacher"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTeacherEmail"/>
+        <Class IRI="#teacher"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTeacherID"/>
+        <Class IRI="#teacher"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTeacherName"/>
+        <Class IRI="#teacher"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasWeeks"/>
+        <Class IRI="#schedule"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasActivityName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasConclusionAct"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasConclusionResult"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDimensionName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOutcomeVerb"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStudentEmail"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStudentID"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStudentName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStudentSemester"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStudentStudyDays"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSubjectCredits"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSubjectHourlyIntensity"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSubjectHours"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSubjectID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSubjectName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSyllabusName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTeacherAttentionSpaces"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTeacherEmail"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTeacherID"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTeacherName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasWeeks"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

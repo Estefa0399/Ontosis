@@ -1,0 +1,110 @@
+Reglas de inferencia:
+
+1. Si el resultado de aprendizaje de la asignatura contiene (Crear un plan para aprender en el futuro acerca de…
+Identificar fuentes importantes de información
+Formular preguntas útiles acerca de…
+Reflexionar
+Autoevaluarse
+Autoregularse
+Desarrollar un plan) Entonces es un resultado de aprendizaje de la dimensión aprender a aprender
+
+Si tengo la evaluacion "E" y la evaluacion "E" es del silabo "S" y el silabo "S" contiene dimension aprender a aprender "AA" y la dimension "AA" contiene el resultado "R1" o "R2"... Entonces la evaluacion "E" tiene dimension aprendizaje 10
+
+2. Si el resultado de aprendizaje de la asignatura contiene (Entusiasmarse con…
+Estar listo para…
+Estar más interesado en…
+Valorar
+Comprometerse con
+Decidirse a
+Estar listo para
+Acordar) Entonces es un resultado de aprendizaje de la dimensión Compromiso
+
+3. Si el resultado de aprendizaje de la asignatura contiene (Verse a sí mismo a la luz de
+Interactuar con otras personas o con el ambiente, en términos de …
+Comprender a los demás en términos de…
+Decidir convertirse en…
+Liderar
+Respetar
+Conciliar
+Negociar
+Ayudar
+Comportar) Entonces es un resultado de aprendizaje de la dimensión Dimensión humana
+
+4. Si el resultado de aprendizaje de la asignatura contiene (Clasificar
+Comprender
+Definir
+Describir
+Elegir
+Enumerar
+Identificar
+Listar
+Nombrar
+Reconocer
+Recordar) Entonces es un resultado de aprendizaje de la dimensión Conocimiento fundamental
+
+5. Si el resultado de aprendizaje de la asignatura contiene (Adaptar
+Analizar
+Argumentar
+Calcular
+Coordinar
+Crear
+Coordinar
+Configurar
+Decidir
+Desarrollar
+Diagnosticar
+Diseñar
+Elaborar
+Emplear
+Evaluar
+Experimentar
+Explicar
+Fabricar
+Gestionar
+Implementar
+Juzgar
+Mejorar
+Modelar
+Modificar
+Operar
+Redactar
+Resolver (Problemas)críticamente
+Seleccionar
+Simular
+Solucionar
+Usar
+Utilizar
+Programar) Entonces es un resultado de aprendizaje de la dimensión Aplicación
+
+6. Si el resultado de aprendizaje de la asignatura contiene (Conectar
+Identificar la interacción entre….
+Identificar las similitudes entre…
+Relacionar
+Diferenciar
+Comparar
+Integrar
+Asociar
+Combinar
+Contrastar) Entonces es un resultado de aprendizaje de la dimensión Integración
+
+7. Si ( Evaluación del aprendizaje
+Reflexiones personales
+Portafolio de aprendizaje
+Desempeño de aprendizaje basado  en problemas
+Matrices de evaluación (Rúbricas) generadas por los estudiantes
+ Aprendiendo, listando Metas
+Diario
+Lista de dominios  multitarea
+Ambientes de aprendizaje personal
+Charlas externas
+Bitácora ) no hacen parte de las actividades de aprendizaje de la dimension aprender a aprender hay un error de planeación
+
+8. Si ( Reflexiones personales
+Cuestionarios estandarizados
+Portafolio de aprendizaje
+Grupos de discusión
+Análisis de situaciones en contextos particulares
+Debates
+Bitácoras) no hacen parte de las actividades de aprendizaje de la dimension compromiso hay un error de planeación
+
+
