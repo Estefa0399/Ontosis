@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ontosis</title>
+    <title>Inicio - Ontosis</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,56 +16,51 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-        }
-        h2 {
+            box-sizing: border-box;
             text-align: center;
-            color: #00C040;
-            font-size: 36px;
-            font-family: Arial, sans-serif;
         }
         .container {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 100px auto;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .class-link {
-            display: block;
-            padding: 10px;
-            margin: 10px 0;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            text-decoration: none;
+        h1 {
+            color: #00C040;
+            font-size: 36px;
+            font-family: Arial, sans-serif;
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 18px;
             color: #333;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00C040;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        .class-link:hover {
-            background-color: #eaeaea;
-        }
-        .back-btn {color:
-            #0056b3;
-        }
-        .back-btn a {
-            color: #007bff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .back-btn a:hover {
-            color: #0056b3;
+        .btn:hover {
+            background-color: #007f2f;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Ontosis</h2>
-        <div class="back-btn">
-            <a href="{{ url_for('index') }}">Volver</a>
-        </div>
-        {% for class_name, class_url in classes %}
-            <a href="{{ class_url }}" class="class-link">{{ class_name }}</a>
-        {% endfor %}
+        <h1>Bienvenido a Ontosis</h1>
+        <p>En esta plataforma puedes explorar la ontología y visualizar su estructura mediante un grafo.</p>
+
+        <a href="{{ url_for('ontology_page') }}" class="btn">Explorar la Ontología</a>
     </div>
 </body>
 </html>
