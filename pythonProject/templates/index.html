@@ -38,9 +38,13 @@
             color: #333;
             margin-bottom: 30px;
         }
+        .btn-container {
+            margin-bottom: 15px; /* Espacio entre los botones */
+        }
         .btn {
-            display: inline-block;
-            padding: 10px 20px;
+            display: block; /* Cambiado a bloque para que ocupen el ancho completo */
+            width: 100%; /* Ocupar todo el ancho disponible */
+            padding: 10px 0; /* Ajuste del relleno */
             background-color: #00C040;
             color: #fff;
             border: none;
@@ -49,6 +53,7 @@
             text-decoration: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            margin-bottom: 10px; /* Espacio entre los botones */
         }
         .btn:hover {
             background-color: #007f2f;
@@ -57,10 +62,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>Bienvenido a Ontosis</h1>
-        <p>En esta plataforma puedes explorar la ontología y visualizar su estructura mediante un grafo.</p>
-
-        <a href="{{ url_for('ontology_page') }}" class="btn">Explorar la Ontología</a>
+        <h1>Bienvenidos a Ontosis</h1>
+        <img src="{{ url_for('static', filename='images/LogoUEB.png') }}" style="width: 50%; max-width: 200px; height: auto; margin-bottom: 20px;">
+        <p>En esta plataforma puedes explorar la ontología del proyecto de grado "Ontosis" y visualizar su estructura mediante un grafo.</p>
+        
+        <p>En "Explorar la ontología" vas a encontrar un acceso a todos los elementos de la ontología y en "Ver Grafo de la Ontología" vas a ser redireccionado a WebVOWL en la cúal podrás visualizar el grafo de ontosis</p>
+        <div class="btn-container">
+            <a href="https://service.tib.eu/webvowl/#iri=https://openclassmedia.org/ontosis/Ontosis/OntosisFinal.owl" class="btn" target="_blank">Ver Grafo de la Ontología</a>
+        </div>
+        <div class="btn-container">
+            <a href="{{ url_for('ontology_page') }}" class="btn">Explorar la Ontología</a>
+        </div>
     </div>
 </body>
 </html>
