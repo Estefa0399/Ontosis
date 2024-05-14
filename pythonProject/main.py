@@ -3,7 +3,7 @@ from owlready2 import *
 
 app = Flask(__name__)
 
-onto = get_ontology("http://localhost:9000/OntosisFinal.owl").load()
+onto = get_ontology("https://openclassmedia.org/ontosis/Ontosis/OntosisFinal.owl").load()
 
 
 @app.route('/')

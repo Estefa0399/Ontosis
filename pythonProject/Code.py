@@ -3,7 +3,7 @@ import pandas as pd
 
 owlready2.JAVA_EXE = "C:\\Users\\estef\\Desktop\\Varios\\Útil\\Protege\\Protege-5.6.1\\jre\\bin\\java.exe"
 
-onto = get_ontology("http://localhost:9000/Syllabus.owx")
+onto = get_ontology("https://openclassmedia.org/ontosis/Ontosis/Syllabus.owx")
 
 onto.load()
 

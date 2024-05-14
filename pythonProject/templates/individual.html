@@ -60,13 +60,13 @@
 </head>
 <body>
     <div class="container">
-        <h2>{{ individual_name }} individual</h2>
+        <h2>{{ individual_name }} </h2>
         <a href="{{ url_for('ontology_page') }}" class="back-link">Volver a la ontología</a><br><br>
-        <h3>Classes</h3>
+        <h3>Clase a la que pertenece</h3>
         {% for class_name, class_url in classes %}
             <a href="{{ class_url }}" class="class-link">{{ class_name }}</a>
         {% endfor %}
-        <h3>Object Properties</h3>
+        <h3>Propiedades</h3>
         {% if object_properties  %}
             {% for object_properties , values in object_properties .items() %}
                 <p class="relation">{{ object_properties }}:
@@ -78,7 +78,7 @@
         {% else %}
             <p class="relation">No object properties associated with this individual.</p>
         {% endif %}
-        <h3>Data Properties</h3>
+        <h3>Resultado</h3>
         {% for data_property, value in data_properties.items() %}
             <p class="relation">{{ data_property }}: {{ value }}</p>
         {% endfor %}

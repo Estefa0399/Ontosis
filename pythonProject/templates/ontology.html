@@ -44,8 +44,9 @@
         .class-link:hover {
             background-color: #eaeaea;
         }
-        .back-btn {color:
-            #0056b3;
+        .back-btn {
+            color: #0056b3;
+            margin-bottom: 10px; /* Espacio debajo del botón */
         }
         .back-btn a {
             color: #007bff;
@@ -55,6 +56,14 @@
         .back-btn a:hover {
             color: #0056b3;
         }
+        .back-btn-text {
+            font-size: 14px;
+            color: #666;
+        }
+        .paragraph {
+    text-align: center;
+}
+
     </style>
 </head>
 <body>
@@ -63,6 +72,7 @@
         <div class="back-btn">
             <a href="{{ url_for('index') }}">Volver</a>
         </div>
+        <p class="paragraph">En esta parte podrás encontrar las partes de la ontología y podrás ver los resultados de las reglas de inferencia en la clase llamada "conclusion"</p>
         {% for class_name, class_url in classes %}
             <a href="{{ class_url }}" class="class-link">{{ class_name }}</a>
         {% endfor %}
