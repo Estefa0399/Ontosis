@@ -12,6 +12,8 @@ resultados = pd.read_excel(file_path, sheet_name='Resultados')
 actividades = pd.read_excel(file_path, sheet_name='Actividades')
 categorizadaResult = pd.read_excel(file_path, sheet_name='Tabla categorizada Res. por dim')
 categorizadaAct = pd.read_excel(file_path, sheet_name='Tabla categorizada Act. por dim')
+
+
 print("================ONTOSIS================")
 
 print(list(onto.classes()))
@@ -21,7 +23,7 @@ with onto:
         # Creacion de las dimensiones en evaluacion y los resultados de aprendizaje en evaluacion
         for column_name, value in row.items():
             if not pd.isnull(value):  # Verificar si el valor de la celda no está vacío
-                if column_name == 'dimension':
+                if column_name == 'Dimensión':
                     value = "E_" + value
                     dimE = onto.evaluation_learning_dimension(value)
                     dimE.hasDimensionName = [value]
@@ -36,7 +38,7 @@ with onto:
         # Creación de actividades y asociación con las dimensiones existentes en evaluación
         for column_name, value in row.items():
             if not pd.isnull(value):  # Verificar si el valor de la celda no está vacío
-                if column_name == 'dimension':
+                if column_name == 'Dimensión':
                     # Buscar la dimensión existente por su nombre
                     value = "E_" + value
                     dim = onto.search_one(hasDimensionName=[value], is_a=onto.evaluation_learning_dimension)
@@ -103,14 +105,19 @@ with onto:
                         con.hasConclusionSyllabus.append(act)
 
 rules = [
-    """ 
-    evaluation_learning_dimension(?evalDim) ^ evaluation_dimension_learning_activity(?evalAct) ^ hasAssociatedActivity(?evalDim, ?evalAct) ^ learning_dimensions(?learnDim) ^ dimension_learning_activity(?learnAct) ^ hasAssociatedActivity(?learnDim, ?learnAct) ^ sameAs(?evalDim, ?learnDim) ^ sameAs(?evalAct, ?learnAct) ^ hasConclusionSyllabus(?c, ?learnAct) -> hasConclusionAct(?c, "CONSISTENTE")
+    """
+     evaluation_learning_dimension(?evalDim) ^ evaluation_dimension_learning_activity(?evalAct) ^ hasAssociatedActivity(?evalDim, ?evalAct) ^ learning_dimensions(?learnDim) ^ dimension_learning_activity(?learnAct) ^ hasAssociatedActivity(?learnDim, ?learnAct) ^ sameAs(?evalDim, ?learnDim) ^ sameAs(?evalAct, ?learnAct) ^ hasConclusionSyllabus(?c, ?learnAct) -> hasConclusionAct(?c, "CONSISTENTE")
+    """,
+    """
+    evaluation_learning_dimension(?evalDim) ^ evaluation_dimension_learning_outcome(?evalRest) ^ hasAssociatedActivity(?evalDim, ?evalAct) ^ learning_dimensions(?learnDim) ^ dimension_learning_outcome(?learnRest) ^ hasAssociatedActivity(?learnDim, ?learnAct) ^ differentFrom(?evalDim, ?learnDim) ^ differentFrom(?evalRest, ?learnRest) ^ hasConclusionSyllabus(?c, ?learnRest) -> hasConclusionRest(?c, "INCONSISTENTE")
+    """,
+    """
+    evaluation_learning_dimension(?evalDim) ^ evaluation_dimension_learning_outcome(?evalRest) ^ hasAssociatedActivity(?evalDim, ?evalAct) ^ learning_dimensions(?learnDim) ^ dimension_learning_outcome(?learnRest) ^ hasAssociatedActivity(?learnDim, ?learnAct) ^ sameAs(?evalDim, ?learnDim) ^ sameAs(?evalRest, ?learnRest) ^ hasConclusionSyllabus(?c, ?learnRest) -> hasConclusionRest(?c, "CONSISTENTE")
+    """,
+    """
+    evaluation_learning_dimension(?evalDim) ^ evaluation_dimension_learning_activity(?evalAct) ^ hasAssociatedActivity(?evalDim, ?evalAct) ^ learning_dimensions(?learnDim) ^ dimension_learning_activity(?learnAct) ^ hasAssociatedActivity(?learnDim, ?learnAct) ^ differentFrom(?evalDim, ?learnDim) ^ differentFrom(?evalAct, ?learnAct) ^ hasConclusionSyllabus(?c, ?learnAct) -> hasConclusionAct(?c, "INCONSISTENTE")
     """
 ]
-
-
-
-
 
 with onto:
     for i, rule in enumerate(rules, start=1):
@@ -120,5 +127,3 @@ with onto:
     sync_reasoner_pellet(infer_property_values=True, infer_data_property_values=True)
 
 onto.save("OntosisF.owl")
-
-
