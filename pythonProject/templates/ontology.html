@@ -72,7 +72,7 @@
         <div class="back-btn">
             <a href="{{ url_for('index') }}">Volver</a>
         </div>
-        <p class="paragraph">En esta parte podrás encontrar las partes de la ontología y podrás ver los resultados de las reglas de inferencia en la clase llamada "conclusion"</p>
+        <p class="paragraph">En esta parte podrás encontrar las componentes de la ontología, puedes dar clic sobre cada uno de los títulos para visualizar el componente particular, podrás ver los resultados de las reglas de inferencia dando clic en la clase llamada "conclusion"</p>
         {% for class_name, class_url in classes %}
             <a href="{{ class_url }}" class="class-link">{{ class_name }}</a>
         {% endfor %}

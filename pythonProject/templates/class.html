@@ -101,13 +101,13 @@
         <a href="{{ url_for('ontology_page') }}" class="back-link">Volver</a><br><br>
         <!-- Formulario de búsqueda -->
         <form class="search-form" action="{{ url_for('class_page', iri=iri) }}" method="GET">
-            <input type="text" name="search" placeholder="Buscar materias...">
+            <input type="text" name="search" placeholder="Buscar...">
             <button type="submit">Buscar</button>
         </form>
         {% for subclass_name, subclass_url in subclasses %}
             <a href="{{ subclass_url }}" class="class-link">{{ subclass_name }}</a>
         {% endfor %}
-        <h3>Materias</h3>
+        <h3>OBJETOS</h3>
         {% if individuals %}
             <ul>
                 {% for individual_name, individual_url in individuals %}
